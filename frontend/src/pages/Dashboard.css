@@ -1,0 +1,112 @@
+/* Dashboard.css */
+
+/* Reset margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7fc;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Make container fill the screen */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Header Styling */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 16px 32px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #1e293b;
+}
+
+/* Navigation Styling */
+.dashboard-nav {
+  display: flex;
+  gap: 16px;
+}
+
+.nav-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+  color: #334155;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-btn:hover {
+  background-color: #e0e7ff;
+  color: #1d4ed8;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.nav-btn.active {
+  background-color: #1d4ed8;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(29, 78, 216, 0.25);
+}
+
+/* Main content area */
+.dashboard-main {
+  flex: 1;
+  padding: 32px 48px;
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.dashboard-main::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .dashboard-nav {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .dashboard-main {
+    padding: 20px;
+  }
+
+  .nav-btn {
+    padding: 8px 10px;
+    font-size: 0.95rem;
+  }
+}
