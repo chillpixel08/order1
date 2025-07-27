@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 import ViewOrders from './ViewOrders';
 import PersonalDetails from './Profile';
-import ChangePassword from './ChangePassword';
 import PaymentMethods from './PaymentMethods';
-import ManageAddresses from './ManageAddresses';
-import SocialAccounts from './SocialAccounts';
 import './Dashboard.css'; // custom styles
 
 const Dashboard = () => {
